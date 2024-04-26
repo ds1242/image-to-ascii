@@ -2,19 +2,15 @@ from tkinter import Tk, BOTH, Canvas
 from PIL import ImageTk, Image
 
 class ImageClass():
-    def __init__(self):
+    def __init__(self, file_path):
         self.__root = Tk()
         self.__root.title('ASCII Image')
-        self.__root.protocol('WM_DELETE_WINDOW", self.close)
-        self.__running = False
+
+        self.__image_path = file_path
+
+    def image_open(self):
+        return Image.open(self.__image_path)
 
 
-    def image_open(self, file_path):
-        return Image.open(file_path)
-
-    def wait_for_close(self):
-        self.__running = True
-        print('window close')
-
-    def close(self):
-        self.__running = False
+    def show_image(self):
+        pass
