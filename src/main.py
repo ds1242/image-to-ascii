@@ -1,12 +1,4 @@
-from image import ImageClass
+from PIL import Image
 
-def main():
-    image = ImageClass()
-    image.image_open('./test.jpg')
-
-    image.wait_for_close()
-
-
-
-# image1.show()
-main()
+# ASCII characters
+ramp = "@%#*+=-:. " 
